@@ -1,6 +1,7 @@
 // TODO Implement this library.
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:loveinaboxapp/views/recipes/components/menu_widget.dart';
 
 class Recipes extends StatelessWidget {
   const Recipes({Key? key}) : super(key: key);
@@ -9,7 +10,9 @@ class Recipes extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.blue, title: Text('Main recipes page')),
+          leading: MenuWidget(),
+          backgroundColor: Colors.blue,
+          title: Text('Main recipes page')),
       body: Container(),
     );
   }
