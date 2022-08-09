@@ -2,10 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:loveinaboxapp/models/love_menu_item.dart';
 
 class MenuItems {
-  static const payment = LoveMenuItem('Payment', Icons.payment);
-  static const food = LoveMenuItem('Food', Icons.face);
+  static const recipes = LoveMenuItem('Recipes', Icons.restaurant);
+  static const payments = LoveMenuItem('Payments', Icons.payment);
+  static const help = LoveMenuItem('Help', Icons.help);
 
-  static const allMenus = <LoveMenuItem>[payment, food];
+  static const allMenus = <LoveMenuItem>[
+    recipes,
+    payments,
+    help,
+    help,
+    help,
+    help
+  ];
 }
 
 class Menu extends StatelessWidget {
@@ -27,6 +35,29 @@ class Menu extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 17.5),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://secure.gravatar.com/avatar/1a5cff8096aeebbb382886932b598df4"),
+                      radius: 35,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10.0),
+                      child: Text("Nicolas E.",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold)),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5.0,
+              ),
               ...MenuItems.allMenus.map(buildMenuItem).toList(),
               Spacer(flex: 2),
             ],

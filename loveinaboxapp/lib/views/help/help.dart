@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:loveinaboxapp/views/recipes/components/menu_widget.dart';
 
-class Recipes extends StatelessWidget {
-  const Recipes({Key? key}) : super(key: key);
+class Help extends StatelessWidget {
+  const Help({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class Recipes extends StatelessWidget {
       // backgroundColor: Colors.indigo,
       appBar: AppBar(
           leading: MenuWidget(),
-          backgroundColor: Colors.blue,
-          title: Text('Recetas')),
+          backgroundColor: Colors.amber,
+          title: Text('Help')),
       body: Container(),
     );
   }
