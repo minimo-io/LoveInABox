@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:loveinaboxapp/models/love_menu_item.dart';
 
 class MenuItems {
-  static const recipes = LoveMenuItem('Recipes', Icons.restaurant);
-  static const payments = LoveMenuItem('Payments', Icons.payment);
-  static const help = LoveMenuItem('Help', Icons.help);
+  static const recipes = LoveMenuItem('Receitas', Icons.restaurant);
+  static const favs = LoveMenuItem('Favoritas', Icons.favorite);
+  static const payments = LoveMenuItem('Pagamentos', Icons.payment);
+  static const settings = LoveMenuItem('Configuração', Icons.settings);
+  static const help = LoveMenuItem('Ajuda', Icons.help);
 
   static const allMenus = <LoveMenuItem>[
     recipes,
+    favs,
     payments,
+    settings,
     help,
-    help,
-    help,
-    help
   ];
 }
 
